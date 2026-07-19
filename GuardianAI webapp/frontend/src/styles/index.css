@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0F172A;
+    color: #F8FAFC;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FFD400;
+}
+
+/* Premium Cyber Glows & Cyber Card Styles */
+.cyber-card {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cyber-card:hover {
+  border-color: rgba(255, 212, 0, 0.3);
+  box-shadow: 0 0 20px rgba(255, 212, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.cyber-card-danger {
+  border-color: rgba(239, 68, 68, 0.3);
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.1);
+}
+
+.cyber-card-danger:hover {
+  border-color: rgba(239, 68, 68, 0.6);
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.25);
+}
+
+.cyber-glow-text {
+  text-shadow: 0 0 10px rgba(255, 212, 0, 0.5);
+}
+
+.cyber-glow-danger-text {
+  text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
+
+/* Dynamic Map Marker Pulse */
+.marker-pulse-warning {
+  box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+  animation: pulse-ring-warning 1.5s infinite;
+}
+
+.marker-pulse-danger {
+  box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  animation: pulse-ring-danger 1.5s infinite;
+}
+
+@keyframes pulse-ring-warning {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 12px rgba(245, 158, 11, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+  }
+}
+
+@keyframes pulse-ring-danger {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 15px rgba(239, 68, 68, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+/* === Sensor-specific card glow variants === */
+.cyber-card-env { border-color: rgba(56,189,248,0.2) !important; box-shadow: 0 0 20px rgba(56,189,248,0.06); }
+.cyber-card-env:hover { border-color: rgba(56,189,248,0.45) !important; box-shadow: 0 0 25px rgba(56,189,248,0.15); transform: translateY(-2px); }
+.cyber-card-motion { border-color: rgba(167,139,250,0.2) !important; box-shadow: 0 0 20px rgba(167,139,250,0.06); }
+.cyber-card-motion:hover { border-color: rgba(167,139,250,0.45) !important; box-shadow: 0 0 25px rgba(167,139,250,0.15); transform: translateY(-2px); }
+
+/* === Glow utilities === */
+.shadow-glow-blue    { box-shadow: 0 0 18px rgba(56,189,248,0.35); }
+.shadow-glow-purple  { box-shadow: 0 0 18px rgba(167,139,250,0.35); }
+.shadow-glow-success { box-shadow: 0 0 18px rgba(52,211,153,0.35); }
+.shadow-glow-warning { box-shadow: 0 0 18px rgba(245,158,11,0.35); }
+.shadow-glow-yellow  { box-shadow: 0 0 18px rgba(255,212,0,0.35); }
+.shadow-glow-danger  { box-shadow: 0 0 18px rgba(239,68,68,0.35); }
+
+/* === Gauge bar === */
+.gauge-bar-track { background: rgba(255,255,255,0.05); border-radius: 999px; overflow: hidden; height: 5px; width: 100%; }
+.gauge-bar-fill { height: 100%; border-radius: 999px; transition: width 0.6s cubic-bezier(0.4,0,0.2,1); }
+
+/* === Shimmer skeleton === */
+@keyframes shimmer { 0% { background-position: -400px 0; } 100% { background-position: 400px 0; } }
+.skeleton { background: linear-gradient(90deg,#1e293b 25%,#2d3f57 50%,#1e293b 75%); background-size: 800px 100%; animation: shimmer 1.6s infinite linear; border-radius: 6px; }
+
+/* === Data pulse border flash === */
+@keyframes data-pulse { 0% { box-shadow: 0 0 0 0 rgba(255,212,0,0.55); } 50% { box-shadow: 0 0 0 6px rgba(255,212,0,0); } 100% { box-shadow: 0 0 0 0 rgba(255,212,0,0); } }
+.data-pulse { animation: data-pulse 0.5s ease-out; }
+
+/* === Animate pulse fast === */
+.animate-pulse-fast { animation: pulse 0.8s cubic-bezier(0.4,0,0.6,1) infinite; }
+
+/* === Motion flicker === */
+@keyframes motion-flicker { 0%,100% { opacity:1; } 50% { opacity:0.55; } }
+.motion-active { animation: motion-flicker 0.4s ease-in-out infinite; }
+
+/* === Toast slide-in-right === */
+@keyframes slide-in-right {
+  0%   { transform: translateX(110%); opacity: 0; }
+  100% { transform: translateX(0);    opacity: 1; }
+}
+.animate-slide-in-right { animation: slide-in-right 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
