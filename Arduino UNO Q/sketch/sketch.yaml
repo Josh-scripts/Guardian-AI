@@ -1,0 +1,17 @@
+profiles:
+  default:
+    fqbn: 
+    platforms:
+      - platform: arduino:zephyr
+    libraries:
+      - mpu6050 (1.0.1)
+      - dependency: Adafruit BusIO (1.17.4)
+      - Adafruit Unified Sensor (1.1.15)
+      - DHT sensor library (1.4.7)
+      - dependency: Adafruit GFX Library (1.12.6)
+      - Adafruit MPU6050 (2.2.9)
+      - dependency: Adafruit SSD1306 (2.5.17)
+      - SparkFun MAX3010x Pulse and Proximity Sensor Library (1.1.2)
+      - Adafruit BMP280 Library (3.0.0)
+
+default_profile: default
