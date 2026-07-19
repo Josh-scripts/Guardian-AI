@@ -4,11 +4,11 @@ An end-to-end, AI-powered smart safety helmet and real-time dashboard ecosystem 
 
 # Dev names and emails
 
-JOSHUA S - joshua.2502110@srec.ac.in
-SAI GANESH S V - saiganesh.2402209@srec.ac.in
-SRI KISHORE S - srikishore.2402236@srec.ac.in
-THOORASHWIN M - thoorashwin.2402248@srec.ac.in
-RITHUSON A - rithuson.2502202@srec.ac.in
+1.JOSHUA S - joshua.2502110@srec.ac.in\
+2.SAI GANESH S V - saiganesh.2402209@srec.ac.in\
+3.SRI KISHORE S - srikishore.2402236@srec.ac.in\
+4.THOORASHWIN M - thoorashwin.2402248@srec.ac.in\
+5.RITHUSON A - rithuson.2502202@srec.ac.in
 
 ---
 
